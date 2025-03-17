@@ -9,6 +9,7 @@ aws configure list
 
 aws iam list-users 
 
+  
 Then to spin up both stacks run
 
 ./run.sh create
