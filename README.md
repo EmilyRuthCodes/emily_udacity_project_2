@@ -3,7 +3,9 @@
 
 ## Spin up instructions
 Check your AWS account is set up in the command line by running the following commands
+'''
 aws configure list
+'''
 aws iam list-users 
 
 Then to spin up both stacks run
