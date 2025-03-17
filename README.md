@@ -11,7 +11,9 @@ Then to spin up both stacks run
 ./run.sh create
 
 ## Tear down instructions
-TODO
+If you want to delete both stacks then run
+
+./run.sh delete
 
 ## Other considerations
 Once created if you want to make changes to either stack you may do so and then update them using

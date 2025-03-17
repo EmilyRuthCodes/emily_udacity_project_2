@@ -39,6 +39,13 @@ fi
 if [ $1 == "delete" ]
 then
     aws cloudformation delete-stack \
+        --stack-name udacity-project2-udagram \
+        --deletion-mode FORCE_DELETE_STACK
+
+read -p "pause for 15 mins whilst udagram stack is deleting" -t 900
+echo "thank you for waiting, we will now delete the networks stack "
+
+    aws cloudformation delete-stack \
         --stack-name udacity-project2-networks-2 \
         --deletion-mode FORCE_DELETE_STACK
 fi
