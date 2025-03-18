@@ -1,5 +1,6 @@
 # CD12352 - Infrastructure as Code Project Solution
 # Emily Cutler-Ames
+URL - http://udacit-loadb-26bpqnbys2im-2051418031.us-east-1.elb.amazonaws.com/
 
 ## Spin up instructions
 Check your AWS account is set up in the command line by running the following commands
