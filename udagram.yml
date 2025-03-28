@@ -63,6 +63,8 @@ Resources:
         - DeviceName: "/dev/sdk"
           Ebs:
             VolumeSize: '10'
+        IamInstanceProfile:
+          Name: !Ref InstanceProfile
   AutoScalingGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
