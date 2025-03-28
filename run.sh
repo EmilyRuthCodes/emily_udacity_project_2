@@ -59,9 +59,9 @@ then
         --region=us-east-1
 
 read -p pause for 5 mins -t 300
-echo "pause whilst networks stack is creating"
+echo "pause whilst networks stack is updating"
 
-    aws cloudformation create-stack \
+    aws cloudformation update-stack \
         --stack-name udacity-project2-udagram \
         --template-body file://udagram.yml \
         --parameters file://udagram-parameters.json \
