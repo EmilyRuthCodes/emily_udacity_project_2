@@ -128,7 +128,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Sub "udagram-s3-bucket-for-the-mills"
-      AccessControl: BucketOwnerRead
+      AccessControl: Private
       VersioningConfiguration:
         Status: Enabled
       LifecycleConfiguration:

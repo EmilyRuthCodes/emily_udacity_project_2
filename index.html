@@ -13,4 +13,5 @@ EOF
 
 sudo rm -r $WEB_DIR/index.*
 sudo cp index.html $WEB_DIR
+sudo chmod 644 /var/www/html/index.html
 sudo systemctl reload nginx

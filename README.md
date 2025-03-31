@@ -11,6 +11,8 @@ Then to spin up both stacks run
 
 ./run.sh create
 
+You will then need to add the index.html file to the S3 bucket manually in the AWS GUI. 
+
 ## Tear down instructions
 If you want to delete both stacks then run
 
@@ -20,3 +22,4 @@ If you want to delete both stacks then run
 Once created if you want to make changes to either stack you may do so and then update them using
 
 ./run.sh update
+

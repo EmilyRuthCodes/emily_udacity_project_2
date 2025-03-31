@@ -5,7 +5,7 @@
 #   $1: Execution mode. Valid values: deploy, delete, preview.
 #
 # Usage examples:
-#   ./run.sh deploy 
+#   ./run.sh create 
 #   ./run.sh update
 #   ./run.sh delete
 #
