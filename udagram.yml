@@ -32,27 +32,12 @@ Resources:
           Fn::Base64: !Sub |
             #!/bin/bash
             sudo apt-get update -y
-            sudo apt-get install nginx -y
-            sudo service nginx start
-
+            sudo apt-get install -y nginx awscli
+            
             WEB_DIR="/var/www/html"
 
-            cat <<EOF > index.html
-            <!DOCTYPE html>
-            <html>
-            <head>
-              <title> It works! Udagram, Udacity </title>
-            </head>
-            <body>
-              <h1> It works! Udagram, Udacity </h1>
-              <p> Hosted by Nginx </p>
-            </body>
-            </html>
-            EOF
-
-            sudo rm -r $WEB_DIR/index.*
-            sudo cp index.html $WEB_DIR
-
+            aws s3 cp s3://udagram-s3-bucket-for-the-mills/index.html $WEB_DIR/index.html
+            sudo service nginx start
             sudo systemctl reload nginx
 
         ImageId: ami-04b4f1a9cf54c11d0
@@ -143,7 +128,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Sub "udagram-s3-bucket-for-the-mills"
-      AccessControl: Private
+      AccessControl: BucketOwnerRead
       VersioningConfiguration:
         Status: Enabled
       LifecycleConfiguration:
